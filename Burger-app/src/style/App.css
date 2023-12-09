@@ -1,0 +1,24 @@
+#root {
+  margin: 0;
+  width: 100%;
+}
+.tab-item:not(:last-child) {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 54px !important;
+}
+.tab-item:not(:last-child)::after {
+  content: "";
+  position: relative;
+  width: 100px;
+  display: inline-block;
+  height: 1px;
+  border-bottom: 1px solid var(--text-muted);
+}
+.tab-item.active {
+  color: var(--text-active) !important;
+}
+.tab-item.active:not(:last-child)::after {
+  border-bottom: 2px solid var(--text-active);
+}
